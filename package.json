@@ -1,0 +1,12 @@
+{
+  "name": "github_profile_cli",
+  "version": "1.0.0",
+  "description": "views profile github with cli",
+  "main": "index.js",
+  "author": "Faisal Ardhani",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "commander": "^11.0.0"
+  }
+}
