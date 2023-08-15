@@ -1,7 +1,3 @@
-Certainly! Here's a cool and informative README for your GitHub Profile CLI project:
-
----
-
 <div align="center">
   <img src="profile-cli.png" alt="GitHub Profile CLI Logo">
 </div>
