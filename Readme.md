@@ -1,11 +1,4 @@
-Tentu, berikut ini adalah contoh isi file README yang menggambarkan proyek CLI GitHub Profile Anda dengan cara yang keren dan menarik:
-
-```markdown
 # GitHub Profile CLI
-
-<p align="center">
-  <img src="download.png" alt="GitHub Profile CLI Logo">
-</p>
 
 A command-line interface (CLI) tool to fetch and display GitHub user profiles in style.
 
