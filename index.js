@@ -19,7 +19,7 @@ program
             .get(`https://api.github.com/users/${username}`)
             .then((response) => {
                 const user = response.data;
-                const table = new Table()
+                const table = new Table({ head: [chalk.greenBright("Form"), chalk.greenBright("Data")] })
 
                 table.push(
                     [chalk.whiteBright.bold('Username'), chalk.blueBright(user.login)],
@@ -33,8 +33,12 @@ program
                 console.log(table.toString());
             })
             .catch((error) => {
-                console.error('Error fetching profile:', error.response.data.message)
-            })
+                if (error.response && error.response.status === 404) {
+                    console.error('User Not Found');
+                } else {
+                    console.error('Error fetching profile:', error.response ? error.response.data.message : 'Unknown error');
+                }
+            });
     })
 
 program.parse(process.argv)

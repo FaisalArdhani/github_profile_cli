@@ -1,14 +1,11 @@
-Certainly! Here's a cool and informative README for your GitHub Profile CLI project:
+# GitHub Profile CLI
 
----
+A Command Line Interface (CLI) tool to fetch and display GitHub user profiles using Node.js.
 
 <div align="center">
   <img src="profile-cli.png" alt="GitHub Profile CLI Logo">
 </div>
 
-# GitHub Profile CLI
-
-A Command Line Interface (CLI) tool to fetch and display GitHub user profiles using Node.js.
 
 ## Table of Contents
 
