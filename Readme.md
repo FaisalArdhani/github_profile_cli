@@ -1,38 +1,26 @@
+Tentu, berikut ini adalah contoh isi file README yang menggambarkan proyek CLI GitHub Profile Anda dengan cara yang keren dan menarik:
+
+```markdown
 # GitHub Profile CLI
 
-A Command Line Interface (CLI) tool to fetch and display GitHub user profiles using Node.js.
+<p align="center">
+  <img src="download.png" alt="GitHub Profile CLI Logo">
+</p>
 
-<div align="center">
-  <img src="profile-cli.png" alt="GitHub Profile CLI Logo">
-</div>
-
-
-## Table of Contents
-
-- [Introduction](#introduction)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Command Reference](#command-reference)
-- [Contributing](#contributing)
-- [License](#license)
-
-## Introduction
-
-GitHub Profile CLI is a handy utility built with Node.js that allows you to quickly retrieve and view GitHub user profiles directly from your terminal. It utilizes the GitHub API to fetch information such as username, name, bio, followers, following, and public repository count for a specified GitHub user.
+A command-line interface (CLI) tool to fetch and display GitHub user profiles in style.
 
 ## Features
 
-- Fetch and display GitHub user profile information.
-- Easy-to-use CLI with clear command syntax.
-- Minimal setup and installation.
+- Fetch and display GitHub user profiles from the command line.
+- Colorful and stylish output.
+- Interactive input for a seamless experience.
 
 ## Installation
 
-1. Ensure you have [Node.js](https://nodejs.org/) installed.
+1. Ensure you have [Node.js](https://nodejs.org/) installed on your machine.
 2. Clone this repository or download the ZIP file.
-3. Open a terminal and navigate to the project directory.
-4. Run the following command to install the required dependencies:
+3. Navigate to the project directory in your terminal.
+4. Install dependencies using the following command:
 
    ```bash
    yarn install
@@ -40,39 +28,37 @@ GitHub Profile CLI is a handy utility built with Node.js that allows you to quic
 
 ## Usage
 
-To use the GitHub Profile CLI, follow these steps:
+To use the GitHub Profile CLI, open your terminal and navigate to the project directory. Then, run the following command:
 
-1. Open a terminal.
-2. Navigate to the project directory.
-3. Run the CLI command followed by the GitHub username:
+```bash
+yarn start profile | yarn start p
+```
 
-   ```bash
-   node index.js profile <username>
-   ```
+You will be prompted to enter a GitHub username. After entering the username, the CLI will fetch the profile information and display it in a stylish table.
 
-   Example:
+## Screenshots
 
-   ```bash
-   node index.js profile octocat
-   ```
+<p align="center">
+  <img src="profile-cli.png" alt="GitHub Profile CLI Screenshot">
+</p>
 
-## Command Reference
+## Dependencies
 
-- `profile <username>` or `-p <username>`: Fetch and display the GitHub profile of the specified username.
+- [axios](https://www.npmjs.com/package/axios): HTTP client for making API requests.
+- [commander](https://www.npmjs.com/package/commander): Library for creating powerful CLI interfaces.
+- [chalk](https://www.npmjs.com/package/chalk): For adding colors to the terminal output.
+- [cli-table3](https://www.npmjs.com/package/cli-table3): Library for generating ASCII tables.
 
-## Contributing
+## Contribution
 
-Contributions are welcome! To contribute to the GitHub Profile CLI project, follow these steps:
-
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix.
-3. Commit your changes and push to your fork.
-4. Open a pull request describing your changes.
-
-Please ensure you adhere to the [Code of Conduct](CODE_OF_CONDUCT.md) and follow the [Contribution Guidelines](CONTRIBUTING.md).
+Contributions are welcome! Feel free to open issues or submit pull requests for any improvements or new features you'd like to add.
 
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
 
 ---
+
+Crafted with ❤️ by Faisal Ardhani🚀
+
+```

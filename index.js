@@ -1,25 +1,33 @@
 #!/usr/bin/env node
 
-const axios = require('axios')
-const { program } = require('commander')
+const axios = require('axios');
+const { program } = require('commander');
 const chalk = require('chalk');
-const Table = require('cli-table3')
-
+const Table = require('cli-table3');
+const prompts = require('prompts');
 
 program
     .version('1.0.0')
-    .description('Github Profile CLI')
+    .description('Github Profile CLI');
 
 program
-    .command('profile <username>') // --> this will enter a github username.
-    .alias('p') // --> use 'p' as an alternative for profile.
+    .command('profile') // --> This command is used when running the code
+    .alias('p')
     .description('Github Profile CLI')
-    .action((username) => {
+    .action(async () => {
+
+        const response = await prompts({
+            //this will enter a github username.
+            type: 'text',
+            name: 'username',
+            message: 'Enter the GitHub username:',
+        });
+
         axios
-            .get(`https://api.github.com/users/${username}`)
+            .get(`https://api.github.com/users/${response.username}`)
             .then((response) => {
                 const user = response.data;
-                const table = new Table({ head: [chalk.greenBright("Form"), chalk.greenBright("Data")] })
+                const table = new Table({ head: [chalk.greenBright('Form'), chalk.greenBright('Data')] });
 
                 table.push(
                     [chalk.whiteBright.bold('Username'), chalk.blueBright(user.login)],
@@ -29,7 +37,7 @@ program
                     [chalk.whiteBright.bold('Following'), chalk.blueBright(user.following)],
                     [chalk.whiteBright.bold('Public Repos'), chalk.blueBright(user.public_repos)],
                     [chalk.whiteBright.bold('Location'), chalk.blueBright(user.location || chalk.redBright('Location not specified'))],
-                )
+                );
                 console.log(table.toString());
             })
             .catch((error) => {
@@ -39,6 +47,6 @@ program
                     console.error('Error fetching profile:', error.response ? error.response.data.message : 'Unknown error');
                 }
             });
-    })
+    });
 
-program.parse(process.argv)
+program.parse(process.argv);
